@@ -1,95 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react';
+import Link from 'next/link';
+import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Driveway Detailing | Premium Mobile Car Detailing in Cookeville, TN',
+  description: 'Driveway Detailing offers top-quality mobile car detailing services in Cookeville, TN. We drive for perfection in exterior and interior detailing, headlight restoration, and more.',
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="home-page">
+      <video autoPlay loop muted className="video-background">
+        <source src="/images/Car Edit.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="overlay"></div>
+      <div className="social-media-sidebar">
+        <a href="https://www.instagram.com/drivewaydetailing.tn/" aria-label="Instagram"><FaInstagram /></a>
+        <a href="https://www.facebook.com/profile.php?id=61566610701668" aria-label="Facebook"><FaFacebookF /></a>
+        <a href="https://x.com/DwDetail" aria-label="Twitter"><FaTwitter /></a>
+      </div>
+      <div className="home-content">
+        <h1>Driving for perfection</h1>
+        <p>Cookeville&apos;s local detailing professional</p>
+        <div className="button-group">
+          <Link href="/services" className="btn btn-primary">OUR SERVICES</Link>
+          <a href="https://squareup.com/appointments/book/o2ujm7vaufvhbc/LJEE0W1TJ1XZY/start" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">MAKE A BOOKING</a>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <section className="about-section">
+        <h2>Why Choose Driveway Detailing?</h2>
+        <p>At Driveway Detailing, I bring the car wash to you. Our mobile detailing services offer convenience without compromising on quality. With years of experience and a passion for perfection, I ensure your vehicle receives the highest standard of care.</p>
+        <ul>
+          <li>Professional-grade products and equipment</li>
+          <li>Experienced and detail-oriented staff</li>
+          <li>Customized detailing packages to suit your needs</li>
+          <li>Environmentally friendly practices</li>
+        </ul>
+      </section>
     </div>
   );
 }

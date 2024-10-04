@@ -1,0 +1,66 @@
+.galleryPage {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .galleryContainer {
+  padding: 6rem 2rem 2rem;
+    flex: 1;
+  }
+  
+  .galleryPage h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0094ff;
+  }
+  
+  .myMasonryGrid {
+    display: flex;
+    margin-left: -30px;
+    width: auto;
+  }
+  
+  .myMasonryGridColumn {
+    padding-left: 30px;
+    background-clip: padding-box;
+  }
+  
+  .galleryItem {
+    margin-bottom: 30px;
+  }
+  
+  .galleryItem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .galleryItem img:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .galleryContainer {
+      padding-top: 4rem;
+    }
+  
+    .galleryPage h1 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .galleryContainer {
+      padding-top: 3rem;
+    }
+  
+    .galleryPage h1 {
+      font-size: 1.8rem;
+    }
+  }
