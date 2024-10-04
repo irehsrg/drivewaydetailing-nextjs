@@ -1,0 +1,56 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .prompt {
+    background-color: #1a1a1a;
+    border: 2px dashed white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .submitButton {
+    width: 98.5%;
+    cursor: pointer;
+    background-color: #0094ff;
+    color: white;
+    height: 40px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 0 16px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 500;
+  }
+
+  .prompt h2 {
+    color:white
+  }
+
+  .prompt p {
+    color:white
+  }

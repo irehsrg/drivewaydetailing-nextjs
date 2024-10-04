@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import EmailPrompt from '../components/emailprompt';
 import './globals.css';
 import { Metadata } from 'next';
 
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
+        <EmailPrompt />
         <main>{children}</main>
         <Footer />
       </body>
