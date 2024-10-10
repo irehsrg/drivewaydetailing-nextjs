@@ -101,7 +101,7 @@ export async function middleware(request) {
     if (isBot) {
       const newURL = `https://service.prerender.io/${request.url}`;
       const newHeaders = new Headers(request.headers);
-      newHeaders.set("X-Prerender-Token", GuDVlFZIwWyYnpba9m2i);
+      newHeaders.set("X-Prerender-Token", process.env.PRERENDER_TOKEN);
       newHeaders.set("X-Prerender-Int-Type", "NextJS");
 
       const res = await fetch(
