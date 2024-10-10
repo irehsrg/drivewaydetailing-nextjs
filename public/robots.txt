@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Allow all bots to access all content
+Disallow:
+
+# Optimize crawl rate
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://dwdetail.com/sitemap.xml
+
+# Block access to specific files and directories (if needed)
+# Disallow: /private/
+# Disallow: /temp/
+# Disallow: /admin/
+
+# Allow search engines to access CSS, JS, and image files
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.gif$
+Allow: /*.svg$
+
+# Block search engines from crawling certain query parameters (if needed)
+# Disallow: /*?q=
+# Disallow: /*?s=
+
+# Block specific user agents (if needed)
+# User-agent: BadBot
+# Disallow: /

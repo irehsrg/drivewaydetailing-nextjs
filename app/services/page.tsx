@@ -23,19 +23,19 @@ const PricingCard: React.FC<PricingCardProps> = ({ prices }) => {
 
   const originalPrices = {
     small: {
-      exterior_interior: 130,
-      exterior_only: 90,
-      interior_only: 70
-    },
-    mid_sized: {
       exterior_interior: 150,
-      exterior_only: 100,
+      exterior_only: 80,
       interior_only: 90
     },
+    mid_sized: {
+      exterior_interior: 220,
+      exterior_only: 110,
+      interior_only: 120
+    },
     large: {
-      exterior_interior: 190,
-      exterior_only: 130,
-      interior_only: 110
+      exterior_interior: 280,
+      exterior_only: 140,
+      interior_only: 160
     }
   };
 
@@ -147,8 +147,8 @@ export default function Services() {
   };
 
   const addons = [
-    { name: "Headlight Restoration", price: 45, description: "Improve visibility and appearance of cloudy headlights" },
-    { name: "Engine Bay Detailing", price: 35, description: "Deep clean and degrease your engine bay" }
+    { name: "Headlight Restoration", price: 60, description: "Improve visibility and appearance of cloudy headlights" },
+    { name: "Engine Bay Detailing", price: 50, description: "Deep clean and degrease your engine bay" }
   ];
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,7 +19,6 @@ export default function Home() {
       <div className="social-media-sidebar">
         <a href="https://www.instagram.com/drivewaydetailing.tn/" aria-label="Instagram"><FaInstagram /></a>
         <a href="https://www.facebook.com/profile.php?id=61566610701668" aria-label="Facebook"><FaFacebookF /></a>
-        <a href="https://x.com/DwDetail" aria-label="Twitter"><FaTwitter /></a>
       </div>
       <div className="home-content">
         <h1>Driving for perfection</h1>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import styles from './footer.module.css';
 
 const Footer: React.FC = () => {
@@ -15,7 +15,6 @@ const Footer: React.FC = () => {
           <div className={styles.socialIcons}>
             <a href="https://www.facebook.com/profile.php?id=61566610701668" aria-label="Facebook"><FaFacebookF color="#4267B2"/></a>
             <a href="https://www.instagram.com/drivewaydetailing.tn/" aria-label="Instagram"><FaInstagram color="#E1306C"/></a>
-            <a href="https://x.com/DwDetail" aria-label="Twitter"><FaTwitter color="#1DA1F2"/></a>
           </div>
         </div>
         <div className="footer-info" style={{ 
