@@ -130,19 +130,19 @@ export default function Services() {
 
   const pricingData = {
     small: {
-      exterior_interior: 99,
+      exterior_interior: 109,
       exterior_only: 69,
-      interior_only: 49
+      interior_only: 79
     },
     mid_sized: {
-      exterior_interior: 119,
-      exterior_only: 79,
-      interior_only: 69
+      exterior_interior: 159,
+      exterior_only: 89,
+      interior_only: 109
     },
     large: {
-      exterior_interior: 159,
-      exterior_only: 109,
-      interior_only: 89
+      exterior_interior: 199,
+      exterior_only: 119,
+      interior_only: 139
     }
   };
 
