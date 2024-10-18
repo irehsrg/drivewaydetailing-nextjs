@@ -16,7 +16,7 @@ export default function Contact() {
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
             <h1>Contact Us</h1>
-            <p>We'd love to hear from you! Feel free to reach out with any questions or to schedule a detailing appointment.</p>
+            <p>I'd love to hear from you! Feel free to reach out with any questions or to schedule a detailing appointment.</p>
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <FaPhone color="#0094ff" />

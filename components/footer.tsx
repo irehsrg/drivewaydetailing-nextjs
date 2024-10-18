@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <Image src="/images/logo-transparent-png.png" alt="Driveway Detailing Logo" width={150} height={150} />
           </Link>
           <div className={styles.socialIcons}>
-            <a href="https://www.facebook.com/profile.php?id=61566610701668" aria-label="Facebook"><FaFacebookF color="#4267B2"/></a>
+            <a href="https://www.facebook.com/profile.php?id=61566483077685" aria-label="Facebook"><FaFacebookF color="#4267B2"/></a>
             <a href="https://www.instagram.com/drivewaydetailing.tn/" aria-label="Instagram"><FaInstagram color="#E1306C"/></a>
           </div>
         </div>
@@ -34,20 +34,7 @@ const Footer: React.FC = () => {
             <p>Email: alex.drivewaydetail@gmail.com</p>
             <p>Cookeville, TN</p>
             <p><a href="https://drive.google.com/file/d/1qHBfHqTnxgUL_jGmtPJUTdBkmK_bmvBZ/view?usp=sharing" style={{ color: '#0094ff' }}>Privacy Policy</a></p>
-          </div>
-          
-          <div className="footer-section" style={{
-            display: 'flex',
-            flexDirection: 'column',
-            height: '100%',
-            flex: 1,
-          }}>
-            <h3 style={{ marginBottom: '0.5rem', color: 'white' }}>Business Hours:</h3>
-            <p>Monday - Friday: 5:00 PM - 9:00 PM</p>
-            <p>Saturday: 8:00 AM - 9:00 PM</p>
-            <p>Sunday: 8:00 AM - 5:00 PM</p>
-          </div>
-          
+          </div>          
           <div className="footer-section" style={{
             display: 'flex',
             flexDirection: 'column',
