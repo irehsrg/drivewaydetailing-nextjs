@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Masonry from 'react-masonry-css';
 import styles from './gallery.module.css';
+import Breadcrumbs from '@/components/breadcrumbs';
 
 interface GalleryItem {
   src: string;
@@ -43,6 +44,7 @@ const breakpointColumnsObj = {
 export default function Gallery() {
   return (
     <div className={styles.galleryPage}>
+      <Breadcrumbs />
       <div className={styles.galleryContainer}>
         <h1>Our Work</h1>
         <Masonry

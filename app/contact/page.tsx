@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './contact.module.css';
 import ContactForm from './contactform';
+import Breadcrumbs from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Contact Driveway Detailing | Car Detailing in Cookeville, TN',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className={styles.contactPage}>
+      <Breadcrumbs />
       <div className={styles.contactContainer}>
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>

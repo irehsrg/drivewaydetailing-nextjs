@@ -37,7 +37,7 @@ export async function middleware(request) {
     "xing-contenttabreceiver",
     "chrome-lighthouse",
     "telegrambot",
-    "integration-test", // Integration testing
+    "integration-test",
   ];
 
   const IGNORE_EXTENSIONS = [
@@ -95,22 +95,29 @@ export async function middleware(request) {
     !isBot ||
     (extension.length && IGNORE_EXTENSIONS.includes(extension))
   ) {
-    return NextResponse.next();
-  } else {
-    // Check if request is coming from a bot
-    if (isBot) {
-      const newURL = `https://service.prerender.io/${request.url}`;
-      const newHeaders = new Headers(request.headers);
-      newHeaders.set("X-Prerender-Token", process.env.PRERENDER_TOKEN);
-      newHeaders.set("X-Prerender-Int-Type", "NextJS");
+    const response = NextResponse.next();
+    response.headers.set('X-Frame-Options', 'DENY');
+    response.headers.set('X-Content-Type-Options', 'nosniff');
+    response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    response.headers.set(
+      'Content-Security-Policy',
+      "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:;"
+    );
+    return response;
+  }
 
-      const res = await fetch(
-        new Request(newURL, {
-          headers: newHeaders,
-          redirect: "manual",
-        })
-      );
+  if (isBot) {
+    const newURL = `https://service.prerender.io/${request.url}`;
+    const newHeaders = new Headers(request.headers);
+    newHeaders.set("X-Prerender-Token", process.env.PRERENDER_TOKEN);
+    newHeaders.set("X-Prerender-Int-Type", "NextJS");
 
+    return fetch(
+      new Request(newURL, {
+        headers: newHeaders,
+        redirect: "manual",
+      })
+    ).then(res => {
       const responseHeaders = new Headers(res.headers);
       responseHeaders.set("X-Redirected-From", request.url);
 
@@ -119,8 +126,8 @@ export async function middleware(request) {
         statusText: res.statusText,
         headers: responseHeaders,
       });
-    }
-
-    return NextResponse.next();
+    });
   }
+
+  return NextResponse.next();
 }

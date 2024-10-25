@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { Metadata } from 'next';
+import Breadcrumbs from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Driveway Detailing | Premium Mobile Car Detailing in Cookeville, TN',
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="home-page">
+      <Breadcrumbs />
       <video autoPlay loop muted className="video-background">
         <source src="/images/Car Edit.mp4" type="video/mp4" />
         Your browser does not support the video tag.

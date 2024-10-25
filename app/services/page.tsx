@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import ServiceCard from '../../components/servicecard';
 import styles from './services.module.css';
+import Breadcrumbs from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Car Detailing Services | Driveway Detailing in Cookeville, TN',
@@ -153,6 +154,7 @@ export default function Services() {
 
   return (
     <div className={styles.servicesPage}>
+      <Breadcrumbs />
       <div className={styles.servicesContainer}>
         <h1>Our Detailing Services</h1>
         {services.map((service, index) => (

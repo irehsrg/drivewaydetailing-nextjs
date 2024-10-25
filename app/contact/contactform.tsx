@@ -27,7 +27,7 @@ export default function ContactForm() {
     emailjs.send('service_s9f2xo6', 'template_pdvf3nr', formData, 'I2YKtXsJPsgVC6LL-')
       .then((response) => {
         console.log('Notification email sent successfully:', response);
-        setSubmitMessage('Thank you for your message. We\'ll get back to you soon!');
+        setSubmitMessage('Thank you for your message. I\'ll get back to you soon!');
         setFormData({ name: '', email: '', message: '' });
       })
       .catch((error) => {

@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { FaUser, FaQuestionCircle, FaClipboardList, FaHandshake, FaPhoneAlt } from 'react-icons/fa';
 import styles from './about.module.css';
+import Breadcrumbs from '@/components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'About Driveway Detailing | Professional Car Detailing in Cookeville, TN',
@@ -28,6 +29,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ icon, title, children }) => (
 export default function About() {
   return (
     <div className={styles.aboutPage}>
+      <Breadcrumbs />
       <div className={styles.aboutHero}>
         <h1>About Driveway Detailing</h1>
       </div>

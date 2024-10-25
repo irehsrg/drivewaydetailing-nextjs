@@ -82,6 +82,7 @@
   }
   
   .contactPage textarea {
+    font-family: '';
     min-height: 150px;
   }
   
