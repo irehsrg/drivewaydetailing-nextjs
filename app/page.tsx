@@ -20,7 +20,7 @@ export default function Home() {
       <div className="overlay"></div>
       <div className="social-media-sidebar">
         <a href="https://www.instagram.com/drivewaydetailing.tn/" aria-label="Instagram"><FaInstagram /></a>
-        <a href="https://www.facebook.com/profile.php?id=61566610701668" aria-label="Facebook"><FaFacebookF /></a>
+        <a href="https://www.facebook.com/profile.php?id=61566483077685" aria-label="Facebook"><FaFacebookF /></a>
       </div>
       <div className="home-content">
         <h1>Driving for perfection</h1>
