@@ -22,24 +22,6 @@ const PricingCard: React.FC<PricingCardProps> = ({ prices }) => {
   const serviceTypes = ['Exterior + Interior', 'Exterior Only', 'Interior Only'];
   const vehicleSizes = ['Small', 'Mid-sized', 'Large'];
 
-  const originalPrices = {
-    small: {
-      exterior_interior: 150,
-      exterior_only: 80,
-      interior_only: 90
-    },
-    mid_sized: {
-      exterior_interior: 220,
-      exterior_only: 110,
-      interior_only: 120
-    },
-    large: {
-      exterior_interior: 280,
-      exterior_only: 140,
-      interior_only: 160
-    }
-  };
-
   return (
     <div className={styles.pricingCard}>
       <table className={styles.pricingTable}>
@@ -56,20 +38,14 @@ const PricingCard: React.FC<PricingCardProps> = ({ prices }) => {
             <tr key={type}>
               <td>{type}</td>
               {vehicleSizes.map((size) => (
-                <td key={size}>
-                  <span className={styles.originalPrice}>
-                    ${originalPrices[size.toLowerCase().replace('-', '_') as keyof typeof originalPrices][type.toLowerCase().replace(/ \+ /g, '_').replace(/ /g, '_') as keyof typeof originalPrices.small]}
-                  </span>
-                  <span className={styles.newPrice}>
-                    ${prices[size.toLowerCase().replace('-', '_')][type.toLowerCase().replace(/ \+ /g, '_').replace(/ /g, '_')]}
-                  </span>
+                <td key={size} className={styles.priceCell}>
+                  ${prices[size.toLowerCase().replace('-', '_')][type.toLowerCase().replace(/ \+ /g, '_').replace(/ /g, '_')]}
                 </td>
               ))}
             </tr>
           ))}
         </tbody>
       </table>
-      <p className={styles.grandOpeningNote}>Grand Opening Special Prices!</p>
       <p className={styles.fineprint}>
         * Prices may vary depending on vehicle condition, size, and specific customer requirements. 
         Please contact us for a personalized quote.
@@ -127,63 +103,63 @@ export default function Services() {
             "Restore clarity and shine"
           ]
         }
-  ];
+    ];
 
-  const pricingData = {
-    small: {
-      exterior_interior: 109,
-      exterior_only: 69,
-      interior_only: 79
-    },
-    mid_sized: {
-      exterior_interior: 159,
-      exterior_only: 89,
-      interior_only: 109
-    },
-    large: {
-      exterior_interior: 199,
-      exterior_only: 119,
-      interior_only: 139
-    }
-  };
+    const pricingData = {
+        small: {
+            exterior_interior: 150,
+            exterior_only: 80,
+            interior_only: 90
+        },
+        mid_sized: {
+            exterior_interior: 220,
+            exterior_only: 110,
+            interior_only: 120
+        },
+        large: {
+            exterior_interior: 280,
+            exterior_only: 140,
+            interior_only: 160
+        }
+    };
 
-  const addons = [
-    { name: "Headlight Restoration", price: 60, description: "Improve visibility and appearance of cloudy headlights" },
-    { name: "Engine Bay Detailing", price: 50, description: "Deep clean and degrease your engine bay" }
-  ];
+    const addons = [
+        { name: "Headlight Restoration", price: 60, description: "Improve visibility and appearance of cloudy headlights" },
+        { name: "Engine Bay Detailing", price: 50, description: "Deep clean and degrease your engine bay" }
+    ];
 
-  return (
-    <div className={styles.servicesPage}>
-      <Breadcrumbs />
-      <div className={styles.servicesContainer}>
-        <h1>Our Detailing Services</h1>
-        {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
+    return (
+        <div className={styles.servicesPage}>
+            <Breadcrumbs />
+            <div className={styles.servicesContainer}>
+                <h1>Our Detailing Services</h1>
+                {services.map((service, index) => (
+                    <ServiceCard key={index} {...service} />
+                ))}
 
-        <h3>Grand Opening Detailing Packages and Pricing</h3>
+                <h3>Detailing Packages and Pricing</h3>
 
-        <div className={styles.pricingContainer}>
-          <PricingCard prices={pricingData} />
+                <div className={styles.pricingContainer}>
+                    <PricingCard prices={pricingData} />
+                </div>
+
+                <h3>Add-on Services</h3>
+
+                <div className={styles.addonsContainer}>
+                    {addons.map((addon, index) => (
+                        <AddonCard key={index} {...addon} />
+                    ))}
+                </div>
+
+                <div className={styles.bookNowContainer}>
+                    <Link href="https://squareup.com/appointments/book/o2ujm7vaufvhbc/LJEE0W1TJ1XZY/start" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className={styles.btnTertiary}>
+                        Book Now
+                    </Link>
+                </div>
+            </div>
         </div>
-
-        <h3>Add-on Services</h3>
-
-        <div className={styles.addonsContainer}>
-          {addons.map((addon, index) => (
-            <AddonCard key={index} {...addon} />
-          ))}
-        </div>
-
-        <div className={styles.bookNowContainer}>
-          <Link href="https://squareup.com/appointments/book/o2ujm7vaufvhbc/LJEE0W1TJ1XZY/start" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className={styles.btnTertiary}>
-            Book Now
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
