@@ -1,130 +1,183 @@
+/* app/about/about.module.css */
+
 .aboutPage {
-    background-color: #1a1a1a;
-    background-size: 40px 40px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .aboutHero {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutHero {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.aboutHero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  max-width: 800px;
+}
+
+.aboutContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+}
+
+.introSection {
+  margin-bottom: 3rem;
+}
+
+.introText {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+
+.introText mark {
+  background-color: rgba(0, 148, 255, 0.2);
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.sectionCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sectionCard h2 {
+  font-size: 2.2rem;
+  color: #0094ff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profileSection {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.profilePic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #0094ff;
+  flex-shrink: 0;
+}
+
+.profileContent {
+  flex: 1;
+}
+
+.profileContent p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.benefitsList,
+.approachList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.benefitsList li,
+.approachList li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.benefitsList li::before,
+.approachList li::before {
+  content: "•";
+  color: #0094ff;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.contactInfo {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(0, 148, 255, 0.1);
+  border-radius: 8px;
+}
+
+.contactInfo p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
   .aboutHero h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 2.5rem;
   }
-  
-  .aboutContainer {
-    max-width: 1000px;
-    margin: 0 auto;
-    flex: 1;
-    color: white;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  .sectionCard {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .sectionCard h2 {
-    font-size: 2.2rem;
-    color: #0094ff;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  .sectionCard h2 span {
-    margin-left: 1rem;
-  }
-  
+
   .profileSection {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-  
-  .profilePic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid #0094ff;
-  }
-  
-  .sectionCard p,
-  .sectionCard ul {
-    font-size: 1.2rem;
-  }
-  
-  .sectionCard ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sectionCard li {
-    margin-bottom: 1rem;
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-  
-  .sectionCard li::before {
-    content: "•";
-    color: #0094ff;
-    margin-right: 1rem;
+
+  .profilePic {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionCard h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutHero h1 {
+    font-size: 2rem;
+  }
+
+  .aboutContainer {
+    padding: 1rem;
+  }
+
+  .sectionCard {
+    padding: 1.5rem;
+  }
+
+  .sectionCard h2 {
     font-size: 1.5rem;
   }
-  
-  @media (max-width: 768px) {
-    .aboutHero h1 {
-      font-size: 3rem;
-    }
-  
-    .profileSection {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .profilePic {
-      width: 150px;
-      height: 150px;
-    }
-  
-    .sectionCard h2 {
-      font-size: 1.8rem;
-    }
+
+  .introText,
+  .profileContent p,
+  .benefitsList li,
+  .approachList li {
+    font-size: 1rem;
   }
-  
-  @media (max-width: 480px) {
-    .aboutHero h1 {
-      font-size: 2.5rem;
-    }
-  
-    .sectionCard {
-      padding: 1.5rem;
-    }
-  
-    .sectionCard h2 {
-      font-size: 1.5rem;
-    }
-  
-    .sectionCard p,
-    .sectionCard ul {
-      font-size: 1rem;
-    }
+
+  .contactInfo p {
+    font-size: 0.9rem;
   }
+}
