@@ -1,0 +1,400 @@
+/* app/blog/[slug]/blogpost.module.css */
+
+.blogPostPage {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blogPostContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+  
+  .postHeader {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .categoryBadge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: #0094ff;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .postHeader h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .postMeta {
+    display: flex;
+    gap: 2rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .featuredImageContainer {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .featuredImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .postContent {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .postContent h2 {
+    font-size: 2rem;
+    color: #0094ff;
+    margin: 2rem 0 1rem;
+  }
+  
+  .postContent p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .postContent ul, .postContent ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+  
+  .postContent li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .postContent strong {
+    color: #0094ff;
+  }
+  
+  .postFooter {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tag {
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .shareLinks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+  }
+  
+  .shareLinks a {
+    color: #0094ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .shareLinks a:hover {
+    color: white;
+  }
+  
+  .sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+  }
+  
+  .authorCard {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .authorImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .authorInfo {
+    color: white;
+  }
+  
+  .authorInfo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #0094ff;
+  }
+  
+  .authorInfo p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .relatedPosts {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .relatedPosts h3 {
+    font-size: 1.5rem;
+    color: #0094ff;
+    margin-bottom: 1.5rem;
+  }
+  
+  .relatedPostsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .relatedPostCard {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .relatedPostCard:hover {
+    transform: translateX(5px);
+  }
+  
+  .relatedPostImage {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .relatedPostInfo h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .relatedPostInfo span {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .ctaCard {
+    background: linear-gradient(135deg, #0057a5, #0094ff);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .ctaCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ctaCard p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    background-color: white;
+    color: #0094ff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .ctaButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+  }
+  
+  .commentSection {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  
+  .commentSection h3 {
+    font-size: 2rem;
+    color: #0094ff;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .commentForm {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  
+  .formFields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .formField {
+    margin-bottom: 1.5rem;
+  }
+  
+  .formField label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .formField input, .formField textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .formField input:focus, .formField textarea:focus {
+    outline: none;
+    border-color: #0094ff;
+  }
+  
+  .submitButton {
+    background-color: #0094ff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #0057a5;
+  }
+  
+  /* Not Found page styles */
+  .notFoundContainer {
+    text-align: center;
+    color: white;
+    padding: 5rem 2rem;
+  }
+  
+  .notFoundContainer h1 {
+    font-size: 3rem;
+    color: #0094ff;
+    margin-bottom: 1.5rem;
+  }
+  
+  .notFoundContainer p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .backToButton {
+    display: inline-block;
+    background-color: #0094ff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .backToButton:hover {
+    background-color: #0057a5;
+  }
+  
+  @media (max-width: 1024px) {
+    .blogPostContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .sidebar {
+      position: static;
+      margin-top: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blogPostContainer {
+      padding-top: 4rem;
+    }
+  
+    .postHeader h1 {
+      font-size: 2.2rem;
+    }
+  
+    .postContent {
+      font-size: 1rem;
+    }
+  
+    .postContent h2 {
+      font-size: 1.5rem;
+    }
+  
+    .formFields {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blogPostContainer {
+      padding: 3rem 1rem 1rem;
+    }
+  
+    .postHeader h1 {
+      font-size: 1.8rem;
+    }
+  
+    .postMeta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .postFooter {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }

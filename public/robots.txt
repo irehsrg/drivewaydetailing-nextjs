@@ -23,6 +23,10 @@ Allow: /*.jpg$
 Allow: /*.gif$
 Allow: /*.svg$
 
+# Explicitly allow crawling of blog content
+Allow: /blog/
+Allow: /blog/*
+
 # Block search engines from crawling certain query parameters (if needed)
 # Disallow: /*?q=
 # Disallow: /*?s=
