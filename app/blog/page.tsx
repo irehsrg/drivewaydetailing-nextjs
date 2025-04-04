@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/breadcrumbs';
+import { getAllBlogPosts, getStrapiMedia, formatDate } from '@/lib/strapi';
+import { BlogPost } from '@/lib/types';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
@@ -10,64 +12,27 @@ export const metadata: Metadata = {
   description: 'Read the latest articles on auto detailing best practices, AI in the automotive industry, and professional car care advice from Cookeville\'s trusted detailing experts.',
 };
 
-// Sample blog post data (in a real app, this would come from a CMS or API)
-const blogPosts = [
-  {
-    id: 'ai-revolution-auto-detailing',
-    title: 'How AI is Revolutionizing Auto Detailing',
-    excerpt: 'Discover how artificial intelligence is transforming the car detailing industry with smart solutions and predictive maintenance.',
-    date: 'April 1, 2025',
-    author: 'Alex Joines',
-    coverImage: '/images/ai-auto-detailing.jpg',
-    category: 'Technology'
-  },
-  {
-    id: 'ceramic-coating-guide',
-    title: 'The Ultimate Guide to Ceramic Coating',
-    excerpt: 'Everything you need to know about ceramic coatings - benefits, application process, maintenance, and why it\'s worth the investment.',
-    date: 'March 15, 2025',
-    author: 'Alex Joines',
-    coverImage: '/images/ceramic-coating.jpg',
-    category: 'Car Care'
-  },
-  {
-    id: 'winter-detailing-tips',
-    title: 'Winter Car Detailing: Protecting Your Vehicle',
-    excerpt: 'Essential tips for maintaining your car\'s appearance and protecting it from harsh winter conditions in Tennessee.',
-    date: 'February 28, 2025',
-    author: 'Alex Joines',
-    coverImage: '/images/winter-detailing.jpg',
-    category: 'Seasonal'
-  },
-  {
-    id: 'ai-powered-tools',
-    title: 'Top AI-Powered Tools for Car Owners',
-    excerpt: 'Explore the latest AI applications that help car owners maintain their vehicles and simplify the detailing process.',
-    date: 'February 15, 2025',
-    author: 'Alex Joines',
-    coverImage: '/images/ai-tools.jpg',
-    category: 'Technology'
-  }
-];
-
-export default function Blog() {
+export default async function Blog() {
+  const blogPosts = await getAllBlogPosts();
+  
   const blogPageSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Driveway Detailing Blog",
     "description": "Expert articles on auto detailing, car care, and automotive AI technology",
     "url": "https://dwdetail.com/blog",
-    "blogPost": blogPosts.map(post => ({
+    "blogPost": blogPosts.filter(post => post && post.attributes).map(post => ({
       "@type": "BlogPosting",
-      "headline": post.title,
-      "description": post.excerpt,
-      "datePublished": post.date,
+      "headline": post.attributes.title,
+      "description": post.attributes.excerpt,
+      "datePublished": post.attributes.publishedAt,
       "author": {
         "@type": "Person",
-        "name": post.author
+        "name": "Alex Joines"
       },
-      "url": `https://dwdetail.com/blog/${post.id}`,
-      "image": `https://dwdetail.com${post.coverImage}`
+      "url": `https://dwdetail.com/blog/${post.attributes.slug}`,
+      "image": getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url) || 
+        'https://dwdetail.com/images/logo-transparent-png.png'
     }))
   };
 
@@ -84,10 +49,10 @@ export default function Blog() {
       
       <div className={styles.blogContainer}>
         <header className={styles.blogHeader}>
-          <h1><strong>Auto Detailing & AI Insights</strong></h1>
+          <h1><strong>Auto Detailing Insights</strong></h1>
           <p className={styles.introText}>
-            Explore our collection of <strong>expert car care articles</strong>, insights on 
-            <mark> AI technology in automotive</mark>, and professional tips to keep your vehicle
+            Explore our collection of <strong>expert car care articles</strong>, insights on
+            <mark>technology in detailing</mark>, and professional tips to keep your vehicle
             looking its best from <em>Cookeville's premier mobile detailing service</em>.
           </p>
         </header>
@@ -105,33 +70,48 @@ export default function Blog() {
           </div>
         </div>
 
-        <section className={styles.blogGrid}>
-          {blogPosts.map((post, index) => (
-            <article key={index} className={styles.blogCard}>
-              <Link href={`/blog/${post.id}`}>
-                <div className={styles.blogImageContainer}>
-                  <div className={styles.categoryBadge}>{post.category}</div>
-                  <Image 
-                    src={post.coverImage} 
-                    alt={post.title}
-                    width={400}
-                    height={250}
-                    className={styles.blogImage}
-                  />
-                </div>
-                <div className={styles.blogContent}>
-                  <div className={styles.metaInfo}>
-                    <span className={styles.date}>{post.date}</span>
-                    <span className={styles.author}>by {post.author}</span>
+        {blogPosts.length === 0 ? (
+          <div className={styles.noPosts}>
+            <h2>No blog posts found</h2>
+            <p>We're working on creating new content. Check back soon!</p>
+          </div>
+        ) : (
+          <section className={styles.blogGrid}>
+            {blogPosts.filter(post => post && post.attributes).map((post: BlogPost) => (
+              <article key={post.id} className={styles.blogCard}>
+                <Link href={`/blog/${post.attributes.slug}`}>
+                  <div className={styles.blogImageContainer}>
+                    <div className={styles.categoryBadge}>{post.attributes.category}</div>
+                    {post.attributes.featuredImage?.data ? (
+                      <Image 
+                        src={getStrapiMedia(post.attributes.featuredImage.data.attributes.url) || ''}
+                        alt={post.attributes.title || 'Blog post image'}
+                        width={400}
+                        height={250}
+                        className={styles.blogImage}
+                      />
+                    ) : (
+                      <div className={styles.placeholderImage}>
+                        No image available
+                      </div>
+                    )}
                   </div>
-                  <h2 className={styles.blogTitle}>{post.title}</h2>
-                  <p className={styles.blogExcerpt}>{post.excerpt}</p>
-                  <span className={styles.readMore}>Read More →</span>
-                </div>
-              </Link>
-            </article>
-          ))}
-        </section>
+                  <div className={styles.blogContent}>
+                    <div className={styles.metaInfo}>
+                      <span className={styles.date}>
+                        {post.attributes.publishedAt ? formatDate(post.attributes.publishedAt) : 'No date'}
+                      </span>
+                      <span className={styles.author}>by Alex Joines</span>
+                    </div>
+                    <h2 className={styles.blogTitle}>{post.attributes.title || 'Untitled Post'}</h2>
+                    <p className={styles.blogExcerpt}>{post.attributes.excerpt || 'No excerpt available'}</p>
+                    <span className={styles.readMore}>Read More →</span>
+                  </div>
+                </Link>
+              </article>
+            ))}
+          </section>
+        )}
 
         <div className={styles.pagination}>
           <span className={`${styles.pageNumber} ${styles.active}`}>1</span>
