@@ -31,7 +31,7 @@ export default async function Blog() {
         "name": "Alex Joines"
       },
       "url": `https://dwdetail.com/blog/${post.attributes.slug}`,
-      "image": getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url) || 
+      "image": getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url || null) ||
         'https://dwdetail.com/images/logo-transparent-png.png'
     }))
   };

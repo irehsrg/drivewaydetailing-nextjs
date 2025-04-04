@@ -67,7 +67,7 @@ const getStrapiURL = () => {
       }
       
       // Transform the data to match your expected structure
-      return data.data.map(post => ({
+      return data.data.map((post: any) => ({
         id: post.id,
         attributes: {
           title: post.Title,
@@ -153,7 +153,7 @@ const getStrapiURL = () => {
       }
       
       // Transform the data like we did for getAllBlogPosts
-      return data.data.map(rawPost => ({
+      return data.data.map((rawPost: any) => ({
         id: rawPost.id,
         attributes: {
           title: rawPost.Title,

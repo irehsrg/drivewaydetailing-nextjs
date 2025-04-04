@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import Breadcrumbs from '@/components/breadcrumbs';
 import { getBlogPostBySlug, getRelatedPosts, getStrapiMedia, formatDate } from '@/lib/strapi';
-import { BlogPost } from '@/lib/types';
+import type { BlogPost } from '@/lib/types';
 import styles from './blogpost.module.css';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       authors: ['Alex Joines'],
       images: [
         {
-          url: getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url) || 
-            'https://dwdetail.com/images/logo-transparent-png.png',
+          url: getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url || null) ||
+              'https://dwdetail.com/images/logo-transparent-png.png',
           width: 1200,
           height: 630,
           alt: post.attributes.title,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: post.attributes.title,
       description: post.attributes.excerpt,
       images: [
-        getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url) || 
+        getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url || null) || 
           'https://dwdetail.com/images/logo-transparent-png.png'
       ],
     },
@@ -65,7 +65,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.attributes.title,
-    "image": getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url) || 
+    "image": getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url || null) ||
       'https://dwdetail.com/images/logo-transparent-png.png',
     "datePublished": post.attributes.publishedAt,
     "dateModified": post.attributes.updatedAt,

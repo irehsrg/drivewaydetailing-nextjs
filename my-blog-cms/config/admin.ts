@@ -1,4 +1,10 @@
-export default ({ env }) => ({
+// ./my-blog-cms/config/admin.ts
+interface AdminEnv {
+  (key: string): string;
+  bool(key: string, defaultValue?: boolean): boolean;
+}
+
+export default ({ env }: { env: AdminEnv }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
   },
