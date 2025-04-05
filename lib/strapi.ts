@@ -6,8 +6,8 @@ import { BlogPost, StrapiArrayResponse } from './types';
 
 // Get the base URL for Strapi API
 const getStrapiURL = () => {
-    return process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-  };
+    return process.env.NEXT_PUBLIC_STRAPI_URL || 'https://drivewaydetailing-nextjs-production.up.railway.app';
+};
   
   // Get the API token for authenticated requests
   const getStrapiToken = () => {
