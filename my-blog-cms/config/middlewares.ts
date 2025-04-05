@@ -7,8 +7,10 @@ module.exports = [
     config: {
       headers: '*',
       origin: [
-        'http://localhost:3000', 
-        'https://drivewaydetailing-nextjs-production.up.railway.app'
+        'http://localhost:3000',
+        'https://drivewaydetailing-nextjs-production.up.railway.app',
+        'https://dwdetail.com',
+        'https://www.dwdetail.com'
       ]
     }
   },
