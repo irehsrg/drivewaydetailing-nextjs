@@ -42,28 +42,43 @@ const getStrapiURL = () => {
   
     const apiUrl = `${getStrapiURL()}/api/${endpoint}`;
     
+    console.log('Fetching from API URL:', apiUrl);
+    console.log('Using token:', getStrapiToken() ? 'Token exists' : 'No token available');
+    
     try {
       const res = await fetch(apiUrl, mergedOptions);
       
+      console.log('API response status:', res.status);
+      
       if (!res.ok) {
+        console.error('Strapi API error:', res.status);
         throw new Error(`Strapi API error: ${res.status}`);
       }
       
-      return await res.json();
+      const data = await res.json();
+      console.log('API response data structure:', JSON.stringify(data).slice(0, 200) + '...');
+      return data;
     } catch (error) {
       console.error('Error fetching from Strapi:', error);
       throw error;
     }
   }
   
-  // Get all blog posts
   export async function getAllBlogPosts(): Promise<BlogPost[]> {
     try {
+      console.log('Getting all blog posts...');
       const data = await fetchAPI('blog-posts?populate=*');
       
       if (!data || !data.data || !Array.isArray(data.data)) {
         console.error('Unexpected response structure from Strapi:', data);
         return [];
+      }
+      
+      console.log(`Retrieved ${data.data.length} blog posts`);
+      
+      // Log the first post to check its structure
+      if (data.data.length > 0) {
+        console.log('First post structure:', JSON.stringify(data.data[0]).slice(0, 200) + '...');
       }
       
       // Transform the data to match your expected structure
