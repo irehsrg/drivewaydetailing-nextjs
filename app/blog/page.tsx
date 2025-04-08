@@ -8,50 +8,22 @@ import { BlogPost } from '@/lib/types';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Auto Detailing & AI Blog | Expert Car Care Tips & Insights',
-  description: 'Read the latest articles on auto detailing best practices, AI in the automotive industry, and professional car care advice from Cookeville\'s trusted detailing experts.',
+  title: 'Auto Detailing & Car Care Blog | Driveway Detailing',
+  description: 'Read the latest articles on auto detailing best practices, car care tips, and professional advice from Cookeville\'s trusted detailing experts.',
 };
 
 export default async function Blog() {
-  console.log('Server: Blog page is rendering');
+  console.log('Rendering Blog page...');
   
   let blogPosts: BlogPost[] = [];
   let errorMessage = '';
   
   try {
-    // Log the Strapi URL being used
-    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'https://drivewaydetailing-nextjs-production.up.railway.app';
-    console.log('Server: Using Strapi URL:', strapiUrl);
-    
-    // Direct fetch for diagnostic purposes
-    try {
-      console.log('Server: Making direct fetch to Strapi API');
-      const directResponse = await fetch(`${strapiUrl}/api/blog-posts?populate=*`, {
-        cache: 'no-store',
-        next: { revalidate: 0 }
-      });
-      console.log('Server: Direct API response status:', directResponse.status);
-      
-      if (directResponse.ok) {
-        const directData = await directResponse.json();
-        console.log('Server: Direct API data:', JSON.stringify(directData).slice(0, 300) + '...');
-      } else {
-        console.error('Server: Direct API error status:', directResponse.status);
-      }
-    } catch (directError) {
-      console.error('Server: Direct fetch error:', directError);
-    }
-    
-    // Normal fetch through utility function
-    console.log('Server: Calling getAllBlogPosts utility function');
+    console.log('Fetching blog posts...');
     blogPosts = await getAllBlogPosts();
-    console.log('Server: Received blog posts count:', blogPosts.length);
-    
-    if (blogPosts.length > 0) {
-      console.log('Server: First blog post:', JSON.stringify(blogPosts[0]).slice(0, 300) + '...');
-    }
+    console.log(`Successfully fetched ${blogPosts.length} blog posts`);
   } catch (error) {
-    console.error('Server: Error fetching blog posts:', error);
+    console.error('Error fetching blog posts:', error);
     if (error instanceof Error) {
       errorMessage = error.message;
     } else {
@@ -65,7 +37,7 @@ export default async function Blog() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Driveway Detailing Blog",
-    "description": "Expert articles on auto detailing, car care, and automotive AI technology",
+    "description": "Expert articles on auto detailing, car care, and automotive technology",
     "url": "https://dwdetail.com/blog",
     "blogPost": (blogPosts || [])
       .filter(post => post && post.attributes)
@@ -100,7 +72,7 @@ export default async function Blog() {
           <h1><strong>Auto Detailing Insights</strong></h1>
           <p className={styles.introText}>
             Explore our collection of <strong>expert car care articles</strong>, insights on
-            <mark>technology in detailing</mark>, and professional tips to keep your vehicle
+            <mark> technology in detailing</mark>, and professional tips to keep your vehicle
             looking its best from <em>Cookeville's premier mobile detailing service</em>.
           </p>
         </header>
@@ -119,7 +91,7 @@ export default async function Blog() {
         </div>
 
         {errorMessage && (
-          <div style={{padding: '20px', background: '#ffeeee', borderRadius: '8px', margin: '20px 0'}}>
+          <div className={styles.errorMessage}>
             <h2>Error loading blog posts</h2>
             <p>{errorMessage}</p>
             <p>Please try again later or contact support if the issue persists.</p>
@@ -130,11 +102,10 @@ export default async function Blog() {
           <div className={styles.noPosts}>
             <h2>No blog posts found</h2>
             <p>We're working on creating new content. Check back soon!</p>
-            <p>Debug info: API call completed but returned no posts.</p>
           </div>
         ) : (
           <section className={styles.blogGrid}>
-            {blogPosts.filter(post => post && post.attributes).map((post: BlogPost) => (
+            {blogPosts.map((post: BlogPost) => (
               <article key={post.id} className={styles.blogCard}>
                 <Link href={`/blog/${post.attributes.slug}`}>
                   <div className={styles.blogImageContainer}>
@@ -160,8 +131,8 @@ export default async function Blog() {
                       </span>
                       <span className={styles.author}>by Alex Joines</span>
                     </div>
-                    <h2 className={styles.blogTitle}>{post.attributes.title || 'Untitled Post'}</h2>
-                    <p className={styles.blogExcerpt}>{post.attributes.excerpt || 'No excerpt available'}</p>
+                    <h2 className={styles.blogTitle}>{post.attributes.title}</h2>
+                    <p className={styles.blogExcerpt}>{post.attributes.excerpt}</p>
                     <span className={styles.readMore}>Read More →</span>
                   </div>
                 </Link>
@@ -180,7 +151,7 @@ export default async function Blog() {
         <section className={styles.subscribeBanner}>
           <div className={styles.subscribeContent}>
             <h2>Stay Updated with Our Latest Articles</h2>
-            <p>Subscribe to our newsletter for expert detailing tips and automotive tech insights</p>
+            <p>Subscribe to our newsletter for expert detailing tips and automotive insights</p>
             <form className={styles.subscribeForm}>
               <input type="email" placeholder="Your email address" />
               <button type="submit">Subscribe</button>
