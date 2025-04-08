@@ -69,6 +69,8 @@ const getStrapiURL = () => {
       console.log('Getting all blog posts...');
       const data = await fetchAPI('blog-posts?populate=*');
       
+      console.log('API Response structure:', JSON.stringify(data).slice(0, 300) + '...');
+      
       if (!data || !data.data || !Array.isArray(data.data)) {
         console.error('Unexpected response structure from Strapi:', data);
         return [];
@@ -76,32 +78,32 @@ const getStrapiURL = () => {
       
       console.log(`Retrieved ${data.data.length} blog posts`);
       
-      // Log the first post to check its structure
-      if (data.data.length > 0) {
-        console.log('First post structure:', JSON.stringify(data.data[0]).slice(0, 200) + '...');
-      }
-      
-      // Transform the data to match your expected structure
-      return data.data.map((post: any) => ({
-        id: post.id,
-        attributes: {
-          title: post.attributes.Title,
-          slug: post.attributes.Slug,
-          content: post.attributes.Content,
-          excerpt: post.attributes.Excerpt,
-          category: post.attributes.Category,
-          publishedAt: post.attributes.publishedAt,
-          createdAt: post.attributes.createdAt,
-          updatedAt: post.attributes.updatedAt,
-          featuredImage: post.attributes.Featured ? {
-            data: {
-              id: post.attributes.Featured.id,
-              attributes: post.attributes.Featured
-            }
-          } : undefined,
-          seoKeywords: post.attributes.SEO
-        }
-      }));
+      // Transform the data - make sure we're accessing fields through attributes
+      return data.data.map((post: any) => {
+        console.log('Processing post:', post.id);
+        console.log('Post structure:', JSON.stringify(post).slice(0, 200) + '...');
+        
+        return {
+          id: post.id,
+          attributes: {
+            title: post.attributes?.Title || 'No Title',
+            slug: post.attributes?.Slug || 'no-slug',
+            content: post.attributes?.Content || '',
+            excerpt: post.attributes?.Excerpt || '',
+            category: post.attributes?.Category || '',
+            publishedAt: post.attributes?.publishedAt,
+            createdAt: post.attributes?.createdAt,
+            updatedAt: post.attributes?.updatedAt,
+            featuredImage: post.attributes?.Featured ? {
+              data: {
+                id: post.attributes.Featured.id,
+                attributes: post.attributes.Featured
+              }
+            } : undefined,
+            seoKeywords: post.attributes?.SEO || ''
+          }
+        };
+      });
     } catch (error) {
       console.error('Error getting all blog posts:', error);
       return [];
