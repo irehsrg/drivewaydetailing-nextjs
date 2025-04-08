@@ -85,21 +85,21 @@ const getStrapiURL = () => {
       return data.data.map((post: any) => ({
         id: post.id,
         attributes: {
-          title: post.Title,
-          slug: post.Slug,
-          content: post.Content,
-          excerpt: post.Excerpt,
-          category: post.Category,
-          publishedAt: post.publishedAt,
-          createdAt: post.createdAt,
-          updatedAt: post.updatedAt,
-          featuredImage: post.Featured ? {
+          title: post.attributes.Title,
+          slug: post.attributes.Slug,
+          content: post.attributes.Content,
+          excerpt: post.attributes.Excerpt,
+          category: post.attributes.Category,
+          publishedAt: post.attributes.publishedAt,
+          createdAt: post.attributes.createdAt,
+          updatedAt: post.attributes.updatedAt,
+          featuredImage: post.attributes.Featured ? {
             data: {
-              id: post.Featured.id,
-              attributes: post.Featured
+              id: post.attributes.Featured.id,
+              attributes: post.attributes.Featured
             }
           } : undefined,
-          seoKeywords: post.SEO
+          seoKeywords: post.attributes.SEO
         }
       }));
     } catch (error) {
@@ -128,26 +128,26 @@ const getStrapiURL = () => {
       }
       
       // Transform the data to match expected structure
-      return {
-        id: rawPost.id,
+      return data.data.map((post: any) => ({
+        id: post.id,
         attributes: {
-          title: rawPost.Title,
-          slug: rawPost.Slug,
-          content: rawPost.Content,
-          excerpt: rawPost.Excerpt,
-          category: rawPost.Category,
-          publishedAt: rawPost.publishedAt,
-          createdAt: rawPost.createdAt,
-          updatedAt: rawPost.updatedAt,
-          featuredImage: rawPost.Featured ? {
+          title: post.attributes.Title,
+          slug: post.attributes.Slug,
+          content: post.attributes.Content,
+          excerpt: post.attributes.Excerpt,
+          category: post.attributes.Category,
+          publishedAt: post.attributes.publishedAt,
+          createdAt: post.attributes.createdAt,
+          updatedAt: post.attributes.updatedAt,
+          featuredImage: post.attributes.Featured ? {
             data: {
-              id: rawPost.Featured.id,
-              attributes: rawPost.Featured
+              id: post.attributes.Featured.id,
+              attributes: post.attributes.Featured
             }
           } : undefined,
-          seoKeywords: rawPost.SEO
+          seoKeywords: post.attributes.SEO
         }
-      };
+      }));
     } catch (error) {
       console.error(`Error getting blog post with slug ${slug}:`, error);
       return null;
@@ -168,24 +168,24 @@ const getStrapiURL = () => {
       }
       
       // Transform the data like we did for getAllBlogPosts
-      return data.data.map((rawPost: any) => ({
-        id: rawPost.id,
+      return data.data.map((post: any) => ({
+        id: post.id,
         attributes: {
-          title: rawPost.Title,
-          slug: rawPost.Slug,
-          content: rawPost.Content,
-          excerpt: rawPost.Excerpt,
-          category: rawPost.Category,
-          publishedAt: rawPost.publishedAt,
-          createdAt: rawPost.createdAt,
-          updatedAt: rawPost.updatedAt,
-          featuredImage: rawPost.Featured ? {
+          title: post.attributes.Title,
+          slug: post.attributes.Slug,
+          content: post.attributes.Content,
+          excerpt: post.attributes.Excerpt,
+          category: post.attributes.Category,
+          publishedAt: post.attributes.publishedAt,
+          createdAt: post.attributes.createdAt,
+          updatedAt: post.attributes.updatedAt,
+          featuredImage: post.attributes.Featured ? {
             data: {
-              id: rawPost.Featured.id,
-              attributes: rawPost.Featured
+              id: post.attributes.Featured.id,
+              attributes: post.attributes.Featured
             }
           } : undefined,
-          seoKeywords: rawPost.SEO
+          seoKeywords: post.attributes.SEO
         }
       }));
     } catch (error) {

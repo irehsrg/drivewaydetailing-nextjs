@@ -10,7 +10,10 @@ module.exports = [
         'http://localhost:3000',
         'https://drivewaydetailing-nextjs-production.up.railway.app',
         'https://dwdetail.com',
-        'https://www.dwdetail.com'
+        'https://www.dwdetail.com',
+        'https://drivewaydetailing-nextjs-irehsrgs-projects.vercel.app',
+        'https://drivewaydetailing-nextjs-git-master-irehsrgs-projects.vercel.app',
+        'https://drivewaydetailing-nextjs.vercel.app'
       ]
     }
   },
