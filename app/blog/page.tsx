@@ -13,27 +13,75 @@ export const metadata: Metadata = {
 };
 
 export default async function Blog() {
-  const blogPosts = await getAllBlogPosts();
+  console.log('Server: Blog page is rendering');
   
+  let blogPosts: BlogPost[] = [];
+  let errorMessage = '';
+  
+  try {
+    // Log the Strapi URL being used
+    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'https://drivewaydetailing-nextjs-production.up.railway.app';
+    console.log('Server: Using Strapi URL:', strapiUrl);
+    
+    // Direct fetch for diagnostic purposes
+    try {
+      console.log('Server: Making direct fetch to Strapi API');
+      const directResponse = await fetch(`${strapiUrl}/api/blog-posts?populate=*`, {
+        cache: 'no-store',
+        next: { revalidate: 0 }
+      });
+      console.log('Server: Direct API response status:', directResponse.status);
+      
+      if (directResponse.ok) {
+        const directData = await directResponse.json();
+        console.log('Server: Direct API data:', JSON.stringify(directData).slice(0, 300) + '...');
+      } else {
+        console.error('Server: Direct API error status:', directResponse.status);
+      }
+    } catch (directError) {
+      console.error('Server: Direct fetch error:', directError);
+    }
+    
+    // Normal fetch through utility function
+    console.log('Server: Calling getAllBlogPosts utility function');
+    blogPosts = await getAllBlogPosts();
+    console.log('Server: Received blog posts count:', blogPosts.length);
+    
+    if (blogPosts.length > 0) {
+      console.log('Server: First blog post:', JSON.stringify(blogPosts[0]).slice(0, 300) + '...');
+    }
+  } catch (error) {
+    console.error('Server: Error fetching blog posts:', error);
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    } else {
+      errorMessage = 'An unknown error occurred';
+    }
+    blogPosts = [];
+  }
+  
+  // Create schema data safely with error handling
   const blogPageSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Driveway Detailing Blog",
     "description": "Expert articles on auto detailing, car care, and automotive AI technology",
     "url": "https://dwdetail.com/blog",
-    "blogPost": blogPosts.filter(post => post && post.attributes).map(post => ({
-      "@type": "BlogPosting",
-      "headline": post.attributes.title,
-      "description": post.attributes.excerpt,
-      "datePublished": post.attributes.publishedAt,
-      "author": {
-        "@type": "Person",
-        "name": "Alex Joines"
-      },
-      "url": `https://dwdetail.com/blog/${post.attributes.slug}`,
-      "image": getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url || null) ||
-        'https://dwdetail.com/images/logo-transparent-png.png'
-    }))
+    "blogPost": (blogPosts || [])
+      .filter(post => post && post.attributes)
+      .map(post => ({
+        "@type": "BlogPosting",
+        "headline": post.attributes.title,
+        "description": post.attributes.excerpt,
+        "datePublished": post.attributes.publishedAt,
+        "author": {
+          "@type": "Person",
+          "name": "Alex Joines"
+        },
+        "url": `https://dwdetail.com/blog/${post.attributes.slug}`,
+        "image": getStrapiMedia(post.attributes.featuredImage?.data?.attributes?.url || null) ||
+          'https://dwdetail.com/images/logo-transparent-png.png'
+      }))
   };
 
   return (
@@ -70,10 +118,19 @@ export default async function Blog() {
           </div>
         </div>
 
-        {blogPosts.length === 0 ? (
+        {errorMessage && (
+          <div style={{padding: '20px', background: '#ffeeee', borderRadius: '8px', margin: '20px 0'}}>
+            <h2>Error loading blog posts</h2>
+            <p>{errorMessage}</p>
+            <p>Please try again later or contact support if the issue persists.</p>
+          </div>
+        )}
+
+        {!errorMessage && blogPosts.length === 0 ? (
           <div className={styles.noPosts}>
             <h2>No blog posts found</h2>
             <p>We're working on creating new content. Check back soon!</p>
+            <p>Debug info: API call completed but returned no posts.</p>
           </div>
         ) : (
           <section className={styles.blogGrid}>
