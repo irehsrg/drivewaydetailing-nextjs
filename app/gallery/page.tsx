@@ -26,7 +26,7 @@ const galleryItems: GalleryItem[] = [
     src: "/images/black-van2.jpeg", 
     alt: "Exterior detailing showcase of van transformation",
     title: "Exterior Detailing Excellence",
-    description: "Deep interior cleaning and restoration of a van's cabin",
+    description: "Deep interior cleaning and restoration of a van's wheels",
     category: "Exterior Detailing"
   },
   { 
@@ -37,42 +37,42 @@ const galleryItems: GalleryItem[] = [
     category: "Headlight Restoration"
   },
   { 
-    src: "/images/white-mustang.jpg", 
+    src: "/images/white-mustang.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
     description: "Complete exterior and interior detailing of a white Ford Mustang",
     category: "Exterior Detailing"
   },
   { 
-    src: "/images/white-mustang2.jpg", 
+    src: "/images/white-mustang2.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
     description: "Complete exterior and interior detailing of a white Ford Mustang",
     category: "Exterior Detailing"
   },
   { 
-    src: "/images/white-mustang3.jpg", 
+    src: "/images/white-mustang3.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
     description: "Complete exterior and interior detailing of a white Ford Mustang",
     category: "Exterior Detailing"
   },
   { 
-    src: "/images/white-mustang6.jpg", 
+    src: "/images/white-mustang6.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
     description: "Complete exterior and interior detailing of a white Ford Mustang",
     category: "Interior Detailing"
   },
   { 
-    src: "/images/white-mustang7.jpg", 
+    src: "/images/white-mustang7.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
     description: "Complete exterior and interior detailing of a white Ford Mustang",
     category: "Interior Detailing"
   },
   { 
-    src: "/images/white-mustang5.jpg", 
+    src: "/images/white-mustang5.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
     description: "Complete exterior and interior detailing of a white Ford Mustang",
