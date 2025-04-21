@@ -47,35 +47,35 @@ const galleryItems: GalleryItem[] = [
     src: "/images/white-mustang2.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    description: "",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/white-mustang3.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    description: "",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/white-mustang6.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    description: "",
     category: "Interior Detailing"
   },
   { 
     src: "/images/white-mustang7.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    description: "",
     category: "Interior Detailing"
   },
   { 
     src: "/images/white-mustang5.JPG", 
     alt: "Premium detailing service on white Ford Mustang",
     title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    description: "",
     category: "Interior Detailing"
   },
   { 
@@ -87,86 +87,86 @@ const galleryItems: GalleryItem[] = [
   },
   { 
     src: "/images/black-van10.jpeg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Black Van Detail",
+    description: "Complete exterior and interior detailing of a black Toyota Sienna",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/black-van4.jpeg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Black Van Detail",
+    description: "Complete exterior and interior detailing of a black Toyota Sienna",
     category: "Interior Detailing"
   },
   { 
     src: "/images/black-van5.jpeg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Black Van Detail",
+    description: "Complete exterior and interior detailing of a black Toyota Sienna",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/black-van6.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Black Van Detail",
+    description: "Complete exterior and interior detailing of a black Toyota Sienna",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/black-van7.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Black Van Detail",
+    description: "Complete exterior and interior detailing of a black Toyota Sienna",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/black-van8.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Black Van Detail",
+    description: "Complete exterior and interior detailing of a black Toyota Sienna",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/black-van9.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Black Van Detail",
+    description: "Complete exterior and interior detailing of a black Toyota Sienna",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/black-van11.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Wheel Resoration",
+    description: "",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/black-van12.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on black Toyota Sienna",
+    title: "Wheel Resoration",
+    description: "",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/civic-clean.jpg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium detailing service on white Honda Civic",
+    title: "Civic Detail",
+    description: "Complete exterior and interior detailing of a silver Honda Civic",
     category: "Exterior Detailing"
   },
   { 
     src: "/images/engine_bay.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    alt: "Premium engine bay detailing service",
+    title: "Engine Bay Detail",
+    description: "Engine bay detailing",
     category: "Engine Bay Detailing"
   },
   { 
     src: "/images/mustang-clean.jpg",
-    alt: "Premium detailing service on white Ford Mustang",
+    alt: "Premium detailing service on black Ford Mustang",
     title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
+    description: "Complete exterior and interior detailing of a black Ford Mustang",
     category: "Exterior Detailing"
   }
 ];
