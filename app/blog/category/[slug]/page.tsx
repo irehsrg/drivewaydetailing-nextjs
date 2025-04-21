@@ -6,7 +6,7 @@ import { FaCalendarAlt, FaUser, FaTag, FaArrowLeft } from 'react-icons/fa';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import Breadcrumbs from '@/components/breadcrumbs';
 import Markdown from '@/components/markdown';
-import styles from '../blog.module.css';
+import styles from './blog.module.css';
 
 interface BlogPostParams {
   params: {
