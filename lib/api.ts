@@ -49,11 +49,11 @@ export async function getAllPosts(page = 1, pageSize = 9) {
  */
 export async function getPostBySlug(slug: string) {
   const data = await fetchAPI('/articles', {
-    filters: {
+    filters: JSON.stringify({
       slug: {
         $eq: slug,
       },
-    },
+    }),
   });
   return data.data[0];
 }
@@ -71,13 +71,13 @@ export async function getAllCategories() {
  */
 export async function getPostsByCategory(categoryId: string, page = 1, pageSize = 9) {
   const data = await fetchAPI('/articles', {
-    filters: {
+    filters: JSON.stringify({
       categories: {
         id: {
           $eq: categoryId,
         },
       },
-    },
+    }),
     'pagination[page]': page.toString(),
     'pagination[pageSize]': pageSize.toString(),
     'sort': 'publishedAt:desc',
