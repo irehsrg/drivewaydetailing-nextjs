@@ -6,7 +6,7 @@ import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import { PortableText } from 'next-sanity';
 import Breadcrumbs from '@/components/breadcrumbs';
-import styles from '../blog.module.css';
+import styles from './blog.module.css';
 
 // Types for our blog post data
 interface Post {
