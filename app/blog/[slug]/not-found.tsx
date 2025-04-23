@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '.blog.module.css';
+import styles from '@/app/blog/blog.module.css';
 import Breadcrumbs from '@/components/breadcrumbs';
 
 export default function BlogPostNotFound() {
