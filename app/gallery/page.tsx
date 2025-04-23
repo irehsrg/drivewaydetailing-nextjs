@@ -9,252 +9,65 @@ import Breadcrumbs from '@/components/breadcrumbs';
 interface GalleryItem {
   src: string;
   alt: string;
-  title: string;
-  description: string;
-  category: string;
 }
 
 const galleryItems: GalleryItem[] = [
-  { 
-    src: "/images/black-van.jpeg", 
-    alt: "Professional exterior detailing results on black van",
-    title: "Complete Van Detailing",
-    description: "Professional exterior detailing service showing the transformation of a black van",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van2.jpeg", 
-    alt: "Exterior detailing showcase of van transformation",
-    title: "Exterior Detailing Excellence",
-    description: "Deep interior cleaning and restoration of a van's cabin",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/headlight-before-after.png", 
-    alt: "Before and after headlight restoration comparison",
-    title: "Headlight Restoration",
-    description: "Dramatic transformation of cloudy headlights to crystal clear",
-    category: "Headlight Restoration"
-  },
-  { 
-    src: "/images/white-mustang.jpg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/white-mustang2.jpg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/white-mustang3.jpg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/white-mustang6.jpg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Interior Detailing"
-  },
-  { 
-    src: "/images/white-mustang7.jpg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Interior Detailing"
-  },
-  { 
-    src: "/images/white-mustang5.jpg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Interior Detailing"
-  },
-  { 
-    src: "/images/black-van3.jpeg", 
-    alt: "",
-    title: "",
-    description: "",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van10.jpeg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van4.jpeg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Interior Detailing"
-  },
-  { 
-    src: "/images/black-van5.jpeg", 
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van6.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van7.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van8.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van9.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van11.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/black-van12.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/civic-clean.jpg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  },
-  { 
-    src: "/images/engine_bay.jpeg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Engine Bay Detailing"
-  },
-  { 
-    src: "/images/mustang-clean.jpg",
-    alt: "Premium detailing service on white Ford Mustang",
-    title: "Mustang Detail",
-    description: "Complete exterior and interior detailing of a white Ford Mustang",
-    category: "Exterior Detailing"
-  }
+  { src: "/images/black-van.jpeg", alt: "Exterior detailing result" },
+  { src: "/images/black-van2.jpeg", alt: "Interior detailing showcase" },
+  { src: "/images/black-van3.jpeg", alt: "Headlight restoration before and after" },
+  { src: "/images/black-van4.jpeg", alt: "Paint correction process" },
+  { src: "/images/black-van5.jpeg", alt: "Wheel detailing close-up" },
+  { src: "/images/black-van6.jpeg", alt: "Full car transformation" },
+  { src: "/images/black-van7.jpeg", alt: "Engine bay cleaning" },
+  { src: "/images/black-van8.jpeg", alt: "Ceramic coating application" },
+  { src: "/images/black-van9.jpeg", alt: "Ceramic coating application" },
+  { src: "/images/black-van10.jpeg", alt: "Ceramic coating application" },
+  { src: "/images/black-van11.jpeg", alt: "Ceramic coating application" },
+  { src: "/images/black-van12.jpeg", alt: "Ceramic coating application" },
+  { src: "/images/headlight-before-after.png", alt: "Headlight restoration comparison" },
+  { src: "/images/white-mustang.jpg", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang2.jpg", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang3.jpg", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang4.jpg", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang5.jpg", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang6.jpg", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang7.jpg", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang8.jpg", alt: "White Mustang detailing" }
 ];
 
+const breakpointColumnsObj = {
+  default: 3,
+  1100: 2,
+  700: 1
+};
+
 export default function Gallery() {
-  const gallerySchema = {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Car Detailing Service Gallery - Cookeville, TN",
-    "description": "View our portfolio of professional car detailing work in Cookeville, TN. Before and after transformations of interior detailing, exterior detailing, and headlight restoration services.",
-    "image": galleryItems.map(item => ({
-      "@type": "ImageObject",
-      "contentUrl": `https://dwdetail.com${item.src}`,
-      "name": item.title,
-      "description": item.description,
-      "caption": item.alt
-    }))
-  };
-
-  const breakpointColumnsObj = {
-    default: 3,
-    1100: 2,
-    700: 1
-  };
-
   return (
     <div className={styles.galleryPage}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(gallerySchema)
-        }}
-      />
-      
       <Breadcrumbs />
-      
       <div className={styles.galleryContainer}>
-        <section className={styles.galleryHeader}>
-          <h1><strong>Our Detailing Portfolio</strong></h1>
-          <p className={styles.introText}>
-            Explore our gallery of <strong>professional car detailing work</strong> in 
-            <mark> Cookeville, TN</mark>. These images showcase our commitment to excellence 
-            in <em>exterior detailing</em>, <em>interior restoration</em>, and 
-            <em> headlight renewal</em> services.
-          </p>
-        </section>
-
+        <h1>Our Work</h1>
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className={styles.myMasonryGrid}
           columnClassName={styles.myMasonryGridColumn}
         >
           {galleryItems.map((item, index) => (
-            <article 
-              key={index} 
-              className={styles.galleryItem}
-              itemScope
-              itemType="https://schema.org/ImageObject"
-            >
-              <div className={styles.imageWrapper}>
+            <div key={index} className={styles.galleryItem}>
+              <div style={{ position: 'relative', width: '100%' }}>
                 <Image
                   src={item.src}
                   alt={item.alt}
                   width={0}
                   height={0}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className={styles.image}
-                  itemProp="contentUrl"
-                  loading={index < 4 ? "eager" : "lazy"}
+                  layout='responsive'
+                  style={{ objectFit: 'cover' }}
                   quality={100}
                 />
-                <div className={styles.imageOverlay}>
-                  <h3 itemProp="name">{item.title}</h3>
-                  <p itemProp="description">{item.description}</p>
-                  <span className={styles.category}>{item.category}</span>
-                </div>
               </div>
-            </article>
+            </div>
           ))}
         </Masonry>
-
-        <section className={styles.galleryFooter}>
-          <p>
-            <strong>Ready to transform your vehicle?</strong> These results speak for themselves. 
-            Contact us today to schedule your professional detailing service in Cookeville and 
-            surrounding areas.
-          </p>
-        </section>
       </div>
     </div>
   );

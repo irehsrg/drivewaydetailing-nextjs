@@ -136,21 +136,13 @@ code {
   z-index: 3;
   text-align: left;
   color: white;
-  padding: 10rem 10% 2rem 10%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding-top: 42.5vh;
+  padding-left: 10%;
 }
 
 .home-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: #ffffff;
-}
-
-.home-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #0094ff;
 }
 
 .home-content p {
@@ -182,108 +174,6 @@ code {
 .social-media-sidebar a:hover {
   color: #0094ff;
   transform: scale(1.2);
-}
-
-.about-section {
-  margin-top: 4rem;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-}
-
-.about-section h3 {
-  font-size: 2rem;
-  color: #0094ff;
-  margin-bottom: 1.5rem;
-}
-
-.about-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about-section li {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-}
-
-.about-section li:before {
-  content: "•";
-  color: #0094ff;
-  margin-right: 1rem;
-  font-size: 1.5rem;
-}
-
-.intro-section {
-  margin: 2rem 0;
-  max-width: 800px;
-}
-
-.intro-section p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-.key-features {
-  margin: 2rem 0;
-}
-
-.key-features h3 {
-  font-size: 2rem;
-  color: #0094ff;
-  margin-bottom: 1.5rem;
-}
-
-.key-features ul {
-  list-style: none;
-  padding: 0;
-}
-
-.key-features li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  color: white;
-}
-
-.key-features li svg {
-  margin-right: 1rem;
-  color: #0094ff;
-}
-
-.key-features strong {
-  margin-right: 0.5rem;
-  color: #0094ff;
-}
-
-mark {
-  background-color: rgba(0, 148, 255, 0.2);
-  color: white;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-}
-
-@media (max-width: 768px) {
-  .home-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .home-content h2 {
-    font-size: 2rem;
-  }
-  
-  .intro-section p {
-    font-size: 1.1rem;
-  }
-  
-  .key-features h3 {
-    font-size: 1.8rem;
-  }
 }
 
 /* About page styles */

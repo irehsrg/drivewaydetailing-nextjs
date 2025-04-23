@@ -4,32 +4,19 @@ import Footer from '../components/footer';
 import EmailPrompt from '../components/emailprompt';
 import './globals.css';
 import { Metadata } from 'next';
-import { getOrganizationSchema, getServiceSchema } from '../lib/seo/schema';
+import { getOrganizationSchema } from '../lib/seo/schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dwdetail.com'),
   title: {
-    default: "Cookeville's Best Auto Detailing - We Come to You! | Driveway Detailing",
-    template: '%s | Cookeville Auto Detailing Services'
+    default: 'Driveway Detailing | Premium Mobile Car Detailing in Cookeville, TN',
+    template: '%s | Driveway Detailing'
   },
-  description: "Professional mobile auto detailing in Cookeville, TN. Expert car detailing services that come to your location. Serving Cookeville and surrounding areas with top-rated interior & exterior detailing services.",
-  keywords: [
-    'auto detailing Cookeville',
-    'mobile car detailing',
-    'car detailing TN',
-    'mobile detailing service',
-    'car wash Cookeville',
-    'exterior detailing',
-    'interior detailing',
-    'headlight restoration',
-    'ceramic coating',
-    'professional car cleaning',
-    'Cookeville car detailing',
-    'Tennessee auto detailing'
-  ],
+  description: 'Professional mobile car detailing services in Cookeville, TN. Offering exterior & interior detailing, headlight restoration, and more. We come to you!',
+  keywords: ['car detailing', 'mobile detailing', 'Cookeville', 'TN', 'auto detailing', 'car wash', 'headlight restoration'],
   authors: [{ name: 'Alex Joines' }],
   creator: 'Alex Joines',
-  publisher: "Cookeville's Best Auto Detailing",
+  publisher: 'Driveway Detailing',
   formatDetection: {
     email: false,
     address: false,
@@ -42,22 +29,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://dwdetail.com',
-    siteName: "Cookeville's Best Auto Detailing",
-    title: "Cookeville's Best Auto Detailing - We Come to You!",
-    description: "Professional mobile auto detailing in Cookeville, TN. From basic wash to premium detailing packages, we bring the car wash to you! Servicing Cookeville, Algood, Baxter, and surrounding areas.",
+    siteName: 'Driveway Detailing',
+    title: 'Driveway Detailing | Premium Mobile Car Detailing in Cookeville, TN',
+    description: 'Professional mobile car detailing services in Cookeville, TN. We bring the car wash to you!',
     images: [
       {
         url: '/images/logo-transparent-png.png',
         width: 1200,
         height: 630,
-        alt: "Cookeville's Best Auto Detailing - Mobile Car Detailing Services",
+        alt: 'Driveway Detailing Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Cookeville's Best Auto Detailing - Mobile Services",
-    description: "Professional mobile car detailing in Cookeville, TN. We come to you!",
+    title: 'Driveway Detailing | Mobile Car Detailing',
+    description: 'Professional mobile car detailing services in Cookeville, TN',
     images: ['/images/logo-transparent-png.png'],
   },
   viewport: {
@@ -86,21 +73,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const combinedSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      getOrganizationSchema(),
-      getServiceSchema()
-    ]
-  };
-
   return (
     <html lang="en">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(combinedSchema)
+            __html: JSON.stringify(getOrganizationSchema())
           }}
         />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

@@ -14,41 +14,40 @@
   padding: 4rem 20px;
 }
 
-.introText {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: white;
-  margin-bottom: 3rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 4rem auto;
-}
-
-.servicesPage h1 {
-  font-size: 3.5rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+.servicesPage h1,
+.servicesPage h3 {
   text-align: center;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .servicesPage h2 {
-  font-size: 2.8rem;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
   text-align: center;
   color: #0094ff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.servicesPage mark {
-  background-color: rgba(0, 148, 255, 0.2);
-  color: white;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
+.servicesPage h1 {
+  font-size: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.servicesPage h2 {
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.servicesPage h3 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
 }
 
 .pricingContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin-bottom: 5rem;
 }
 
@@ -59,46 +58,49 @@
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.pricingTable {
+.pricingCard table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
-  color: white;
 }
 
-.pricingTable th {
+.pricingCard th {
   color: #0094ff;
   font-size: 1.8rem;
-  padding: 1rem;
-  text-align: left;
+  padding: 1rem 0.5rem;
 }
 
-.pricingTable td {
-  padding: 1.5rem 1rem;
+.pricingCard td {
+  color: #ffffff;
   font-size: 1.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0.5rem;
 }
 
 .priceCell {
-  text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
   font-weight: bold;
+  color: #ffffff !important;
 }
 
 .fineprint {
   font-size: 0.9rem;
   color: #a0a0a0;
   text-align: center;
-  margin-top: 1.5rem;
+  font-style: italic;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .addonsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .addonCard {
@@ -117,20 +119,15 @@
 
 .addonCard h4 {
   font-size: 1.6rem;
+  font-weight: bold;
   color: #0094ff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-.price {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.description {
+.addonCard p {
   color: #ffffff;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
 }
 
 .bookNowContainer {
@@ -143,64 +140,49 @@
   color: white;
   border: 2px solid #0094ff;
   font-size: 1.8rem;
-  padding: 1rem 2rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
   border-radius: 5px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btnTertiary:hover {
-  transform: scale(1.05);
   opacity: 0.9;
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
   .servicesPage h1 {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
   }
 
   .servicesPage h2 {
-    font-size: 2rem;
+      font-size: 2rem;
   }
 
-  .introText {
-    font-size: 1.1rem;
-    padding: 0 1rem;
-  }
-
-  .pricingTable th {
-    font-size: 1.4rem;
-  }
-
-  .pricingTable td {
-    font-size: 1.2rem;
-  }
-
-  .priceCell {
-    font-size: 1.4rem;
+  .servicesPage h3 {
+      font-size: 1.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .servicesPage h1 {
-    font-size: 2rem;
-    padding: 0 1rem;
+      font-size: 2rem;
   }
 
   .servicesPage h2 {
-    font-size: 1.8rem;
+      font-size: 1.8rem;
   }
 
+  .servicesPage h3 {
+      font-size: 1.5rem;
+  }
+
+  .pricingContainer,
   .addonsContainer {
-    grid-template-columns: 1fr;
-  }
-
-  .pricingCard {
-    padding: 1rem;
-  }
-
-  .btnTertiary {
-    font-size: 1.4rem;
+      grid-template-columns: 1fr;
   }
 }

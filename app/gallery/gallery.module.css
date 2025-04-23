@@ -1,175 +1,66 @@
-/* app/gallery/gallery.module.css */
-
 .galleryPage {
-  background-color: #1a1a1a;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.galleryContainer {
-  max-width: 1400px;
-  margin: 0 auto;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .galleryContainer {
   padding: 6rem 2rem 2rem;
-  flex: 1;
-}
-
-.galleryHeader {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.galleryHeader h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #0094ff;
-  margin-bottom: 1.5rem;
-}
-
-.introText {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: white;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.introText mark {
-  background-color: rgba(0, 148, 255, 0.2);
-  color: white;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-}
-
-.myMasonryGrid {
-  display: flex;
-  margin-left: -30px;
-  width: auto;
-}
-
-.myMasonryGridColumn {
-  padding-left: 30px;
-  background-clip: padding-box;
-}
-
-.galleryItem {
-  margin-bottom: 30px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.imageOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-  padding: 2rem 1rem 1rem;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  color: white;
-}
-
-.imageWrapper:hover .image {
-  transform: scale(1.05);
-}
-
-.imageWrapper:hover .imageOverlay {
-  transform: translateY(0);
-}
-
-.imageOverlay h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #0094ff;
-}
-
-.imageOverlay p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.category {
-  display: inline-block;
-  background-color: #0094ff;
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
-.galleryFooter {
-  text-align: center;
-  margin-top: 4rem;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-}
-
-.galleryFooter p {
-  color: white;
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .galleryContainer {
-    padding-top: 4rem;
+    flex: 1;
   }
-
-  .galleryHeader h1 {
-    font-size: 2.5rem;
+  
+  .galleryPage h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0094ff;
   }
-
-  .introText {
-    font-size: 1.1rem;
-    padding: 0 1rem;
+  
+  .myMasonryGrid {
+    display: flex;
+    margin-left: -30px;
+    width: auto;
   }
-
-  .imageOverlay {
-    transform: translateY(0);
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+  
+  .myMasonryGridColumn {
+    padding-left: 30px;
+    background-clip: padding-box;
   }
-
-  .imageOverlay h3 {
-    font-size: 1.2rem;
+  
+  .galleryItem {
+    margin-bottom: 30px;
   }
-
-  .imageOverlay p {
-    font-size: 0.9rem;
+  
+  .galleryItem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
   }
-}
-
-@media (max-width: 480px) {
-  .galleryContainer {
-    padding: 3rem 1rem 1rem;
+  
+  .galleryItem img:hover {
+    transform: scale(1.05);
   }
-
-  .galleryHeader h1 {
-    font-size: 2rem;
+  
+  @media (max-width: 768px) {
+    .galleryContainer {
+      padding-top: 4rem;
+    }
+  
+    .galleryPage h1 {
+      font-size: 2.2rem;
+    }
   }
-
-  .introText {
-    font-size: 1rem;
+  
+  @media (max-width: 480px) {
+    .galleryContainer {
+      padding-top: 3rem;
+    }
+  
+    .galleryPage h1 {
+      font-size: 1.8rem;
+    }
   }
-
-  .galleryFooter p {
-    font-size: 1rem;
-  }
-}
