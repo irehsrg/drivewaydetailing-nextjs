@@ -43,6 +43,7 @@ const Navbar: React.FC = () => {
           <li><Link href="/services" onClick={toggleMenu}>SERVICES</Link></li>
           <li><Link href="/about" onClick={toggleMenu}>ABOUT</Link></li>
           <li><Link href="/gallery" onClick={toggleMenu}>GALLERY</Link></li>
+          <li><Link href="/blog" onClick={toggleMenu}>BLOG</Link></li>
           <li><Link href="/contact" onClick={toggleMenu}>CONTACT</Link></li>
         </ul>
       </nav>
