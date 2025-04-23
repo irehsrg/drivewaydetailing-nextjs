@@ -1,6 +1,3 @@
-// Update the navigation links in navbar.tsx
-// Original file at components/navbar.tsx
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -46,7 +43,6 @@ const Navbar: React.FC = () => {
           <li><Link href="/services" onClick={toggleMenu}>SERVICES</Link></li>
           <li><Link href="/about" onClick={toggleMenu}>ABOUT</Link></li>
           <li><Link href="/gallery" onClick={toggleMenu}>GALLERY</Link></li>
-          <li><Link href="/blog" onClick={toggleMenu}>BLOG</Link></li>
           <li><Link href="/contact" onClick={toggleMenu}>CONTACT</Link></li>
         </ul>
       </nav>
