@@ -25,14 +25,14 @@ const galleryItems: GalleryItem[] = [
   { src: "/images/black-van11.jpeg", alt: "Ceramic coating application" },
   { src: "/images/black-van12.jpeg", alt: "Ceramic coating application" },
   { src: "/images/headlight-before-after.png", alt: "Headlight restoration comparison" },
-  { src: "/images/white-mustang.jpg", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang2.jpg", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang3.jpg", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang4.jpg", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang5.jpg", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang6.jpg", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang7.jpg", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang8.jpg", alt: "White Mustang detailing" }
+  { src: "/images/white-mustang.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang2.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang3.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang4.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang5.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang6.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang7.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang8.JPG", alt: "White Mustang detailing" }
 ];
 
 const breakpointColumnsObj = {

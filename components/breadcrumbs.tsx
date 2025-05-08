@@ -13,11 +13,6 @@ const Breadcrumbs = () => {
   return (
     <nav aria-label="Breadcrumb" className="px-4 py-2 text-sm text-white/70">
       <ol className="flex items-center space-x-2">
-        <li>
-          <Link href="/" className="hover:text-white">
-            Home
-          </Link>
-        </li>
         {paths.map((path, index) => {
           const href = `/${paths.slice(0, index + 1).join('/')}`;
           const label = path.charAt(0).toUpperCase() + path.slice(1);
