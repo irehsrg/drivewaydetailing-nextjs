@@ -19,13 +19,53 @@ interface BlogPost {
   author: string;
 }
 
-// Sample blog posts - these would be replaced with your actual content
+// Blog posts with updated IDs
 const blogPosts: BlogPost[] = [
   {
     id: 'economics-of-detailing',
     title: 'Time is Money: The Real Economics of Professional Car Detailing',
     excerpt: 'Discover why professional car detailing can be more economical than DIY when you consider the true value of your time, equipment costs, and expertise.',
     date: 'April 7, 2025',
+    image: '/images/blog/econ-blog.jpg',
+    author: 'Alex Joines'
+  },
+  {
+    id: 'seasonal-car-care',
+    title: 'Seasonal Car Care: Practical Protection Strategies Year-Round',
+    excerpt: 'Learn effective seasonal car care strategies to protect your vehicle throughout the year in Tennessee's variable climate, from dealing with pollen in spring to road salt in winter.',
+    date: 'April 14, 2025',
+    image: '/images/blog/econ-blog.jpg',
+    author: 'Alex Joines'
+  },
+  {
+    id: 'joy-in-detailing',
+    title: 'Finding Joy in the Little Things: The Satisfaction of a Freshly Detailed Car',
+    excerpt: 'Explore the psychology behind the unique satisfaction of a freshly detailed car and how this simple pleasure impacts your mental wellbeing and daily experience.',
+    date: 'April 21, 2025',
+    image: '/images/blog/econ-blog.jpg',
+    author: 'Alex Joines'
+  },
+  {
+    id: 'beyond-aesthetics',
+    title: 'Beyond Aesthetics: How Professional Detailing Protects Your Health',
+    excerpt: 'Learn how professional car detailing does more than make your vehicle look good—it creates a healthier environment by removing allergens, reducing cross-contamination, and improving air quality.',
+    date: 'April 28, 2025',
+    image: '/images/blog/econ-blog.jpg',
+    author: 'Alex Joines'
+  },
+  {
+    id: 'mental-benefit',
+    title: 'The Hidden Mental Benefits of a Clean Car: Why Detailing Is Self-Care',
+    excerpt: 'Discover how a clean car impacts your mental wellbeing. Learn why professional detailing is an investment in self-care and psychological comfort.',
+    date: 'May 5, 2025',
+    image: '/images/blog/econ-blog.jpg',
+    author: 'Alex Joines'
+  },
+  {
+    id: 'true-cost',
+    title: 'The True Cost of Car Detailing: Is It Worth Your Money?',
+    excerpt: 'Explore the comprehensive cost analysis of professional car detailing versus DIY approaches, considering equipment investment, time value, expertise, and convenience factors.',
+    date: 'May 12, 2025',
     image: '/images/blog/econ-blog.jpg',
     author: 'Alex Joines'
   }

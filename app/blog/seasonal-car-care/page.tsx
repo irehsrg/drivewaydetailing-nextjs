@@ -216,7 +216,7 @@ export default function EconomicsOfDetailing() {
           <Link href="/blog" className={`${styles.blogPostNavLink} ${styles.blogPostNavLinkPrev}`}>
             Back to Blog
           </Link>
-          <Link href="/blog/seasonal-car-care" className={`${styles.blogPostNavLink} ${styles.blogPostNavLinkNext}`}>
+          <Link href="/blog/joy-in-detailing" className={`${styles.blogPostNavLink} ${styles.blogPostNavLinkNext}`}>
             Next Post
           </Link>
         </nav>
