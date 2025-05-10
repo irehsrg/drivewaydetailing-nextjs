@@ -66,7 +66,7 @@ export default function PsychologyOfCleanCar() {
             
             <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
               <Image
-                src="/images/blog/before-after-interior.jpg"
+                src="/images/blog/joy-clean.jpg"
                 alt="Split image showing messy car interior beside same interior after professional detailing"
                 width={900}
                 height={300}
@@ -129,7 +129,7 @@ export default function PsychologyOfCleanCar() {
             
             <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
               <Image
-                src="/images/blog/steering-wheel-touch.jpg"
+                src="/images/blog/joy-tactile.jpg"
                 alt="Close-up of hand touching perfectly cleaned and conditioned leather steering wheel"
                 width={900}
                 height={300}
@@ -191,16 +191,6 @@ export default function PsychologyOfCleanCar() {
               These identity reinforcement mechanisms explain why vehicle condition often impacts owner confidence and 
               satisfaction disproportionately to functional considerations.
             </p>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/confident-owner.jpg"
-                alt="Person exhibiting confident body language while entering or standing beside a perfectly detailed vehicle"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>The Temporal Dimensions of Detailing Satisfaction</h2>
             <p>
@@ -289,16 +279,6 @@ export default function PsychologyOfCleanCar() {
               experience to interpersonal domains.
             </p>
             
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/social-enjoyment.jpg"
-                alt="Small group of people entering a professionally detailed vehicle, looking pleased and comfortable"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
-            
             <h2>The Interior-Focused Approach: Where Satisfaction Concentrates</h2>
             <p>
               While exterior detailing provides significant visual transformation, interior detailing typically 
@@ -342,16 +322,6 @@ export default function PsychologyOfCleanCar() {
               These factors explain why interior detailing often generates superior satisfaction despite sometimes 
               costing less than exterior services—a counterintuitive value proposition.
             </p>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/driver-area-comparison.jpg"
-                alt="Before/after of vehicle interior focusing on driver's area"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>Conclusion: The Integrated Approach to Automotive Wellbeing</h2>
             <p>

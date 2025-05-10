@@ -23,7 +23,7 @@ export default function MentalBenefitsCleanCar() {
           
           <div className={styles.blogPostImageContainer}>
             <Image
-              src="/images/blog/mental-benefits-main.jpg"
+              src="/images/blog/self-care-blog.jpg"
               alt="Person relaxing in a clean, organized car interior"
               width={900}
               height={500}
@@ -48,16 +48,6 @@ export default function MentalBenefitsCleanCar() {
               <li><strong>Decreased Stress Markers</strong>: Studies measuring cortisol (the primary stress hormone) show elevated levels when subjects occupy disorganized or unclean spaces.</li>
               <li><strong>Improved Focus</strong>: A clean environment reduces attentional fatigue, potentially improving driving safety and awareness.</li>
             </ul>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/clean-vs-cluttered.jpg"
-                alt="Split image showing a cluttered car interior beside a pristinely detailed one"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>The Transitional Space Phenomenon</h2>
             <p>
@@ -100,16 +90,6 @@ export default function MentalBenefitsCleanCar() {
               <li>Dust-free surfaces prevent tactile dissatisfaction during interaction</li>
             </ul>
             
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/tactile-satisfaction.jpg"
-                alt="Close-up of hand on clean, conditioned leather steering wheel"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
-            
             <h2>Psychological Ownership and Extended Self</h2>
             <p>
               Consumer psychology research demonstrates that possessions we maintain carefully become integrated into 
@@ -136,16 +116,6 @@ export default function MentalBenefitsCleanCar() {
               <li>Completion satisfaction similar to task accomplishment</li>
               <li>Restoration pleasure unique to bringing order from disorder</li>
             </ul>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/before-after-transformation.jpg"
-                alt="Before/after detailing transformation of a vehicle interior"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>Time Scarcity and Mental Load Management</h2>
             <p>
@@ -177,16 +147,6 @@ export default function MentalBenefitsCleanCar() {
               Professional detailing enhances this sanctuary function, creating an environment that supports brief 
               psychological restoration throughout busy days.
             </p>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/car-sanctuary.jpg"
-                alt="Person relaxing in clean car interior, appearing peaceful"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>Balancing Investment and Return</h2>
             <p>

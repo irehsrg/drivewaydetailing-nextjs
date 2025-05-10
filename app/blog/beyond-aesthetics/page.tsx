@@ -23,7 +23,7 @@ export default function HealthBenefitsOfDetailing() {
           
           <div className={styles.blogPostImageContainer}>
             <Image
-              src="/images/blog/health-benefits-main.jpg"
+              src="/images/blog/health-blog.jpeg"
               alt="Professional car interior cleaning with focus on sanitation"
               width={900}
               height={500}
@@ -55,16 +55,6 @@ export default function HealthBenefitsOfDetailing() {
               Professional detailing addresses these concerns through thorough cleaning protocols and extraction methods 
               that remove both visible contaminants and embedded dirt particles that harbor microorganisms.
             </p>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/upholstery-extraction.jpg"
-                alt="Before and after of professional extraction showing visible difference in upholstery cleanliness"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>Allergen Reduction Through Professional Extraction</h2>
             <p>
@@ -107,7 +97,7 @@ export default function HealthBenefitsOfDetailing() {
             
             <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
               <Image
-                src="/images/blog/touch-points-cleaning.jpg"
+                src="/images/blog/health-touch.jpg"
                 alt="High-touch points in vehicle interior highlighted with explanation of cleaning process"
                 width={900}
                 height={300}
@@ -155,16 +145,6 @@ export default function HealthBenefitsOfDetailing() {
               These psychological benefits complement the physical health protections of professional detailing, creating 
               comprehensive wellbeing enhancement.
             </p>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/relaxed-driver.jpg"
-                alt="Person looking relaxed and comfortable in professionally detailed car interior"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>Practical Health-Focused Vehicle Maintenance</h2>
             <p>

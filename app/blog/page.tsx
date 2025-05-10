@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     title: 'Seasonal Car Care: Practical Protection Strategies Year-Round',
     excerpt: "Learn effective seasonal car care strategies to protect your vehicle throughout the year in Tennessee's variable climate, from dealing with pollen in spring to road salt in winter.",
     date: 'April 14, 2025',
-    image: '/images/blog/econ-blog.jpg',
+    image: '/images/blog/seasonal-blog.jpg',
     author: 'Alex Joines'
   },
   {
@@ -42,7 +42,7 @@ const blogPosts: BlogPost[] = [
     title: 'Finding Joy in the Little Things: The Satisfaction of a Freshly Detailed Car',
     excerpt: 'Explore the psychology behind the unique satisfaction of a freshly detailed car and how this simple pleasure impacts your mental wellbeing and daily experience.',
     date: 'April 21, 2025',
-    image: '/images/blog/econ-blog.jpg',
+    image: '/images/blog/clean-car-joy.jpg',
     author: 'Alex Joines'
   },
   {
@@ -50,7 +50,7 @@ const blogPosts: BlogPost[] = [
     title: 'Beyond Aesthetics: How Professional Detailing Protects Your Health',
     excerpt: 'Learn how professional car detailing does more than make your vehicle look good—it creates a healthier environment by removing allergens, reducing cross-contamination, and improving air quality.',
     date: 'April 28, 2025',
-    image: '/images/blog/econ-blog.jpg',
+    image: '/images/blog/health-blog.jpeg',
     author: 'Alex Joines'
   },
   {
@@ -58,7 +58,7 @@ const blogPosts: BlogPost[] = [
     title: 'The Hidden Mental Benefits of a Clean Car: Why Detailing Is Self-Care',
     excerpt: 'Discover how a clean car impacts your mental wellbeing. Learn why professional detailing is an investment in self-care and psychological comfort.',
     date: 'May 5, 2025',
-    image: '/images/blog/econ-blog.jpg',
+    image: '/images/blog/self-care-blog.jpg',
     author: 'Alex Joines'
   },
   {
@@ -66,7 +66,7 @@ const blogPosts: BlogPost[] = [
     title: 'The True Cost of Car Detailing: Is It Worth Your Money?',
     excerpt: 'Explore the comprehensive cost analysis of professional car detailing versus DIY approaches, considering equipment investment, time value, expertise, and convenience factors.',
     date: 'May 12, 2025',
-    image: '/images/blog/econ-blog.jpg',
+    image: '/images/blog/cost-blog.jpg',
     author: 'Alex Joines'
   }
 ];

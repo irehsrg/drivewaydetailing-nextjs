@@ -23,7 +23,7 @@ export default function TrueCostOfDetailing() {
           
           <div className={styles.blogPostImageContainer}>
             <Image
-              src="/images/blog/cost-analysis-main.jpg"
+              src="/images/blog/cost-blog.jpg"
               alt="Professional detailer working on a car with cost analysis overlay"
               width={900}
               height={500}
@@ -66,16 +66,6 @@ export default function TrueCostOfDetailing() {
               <li><strong>Physical exertion</strong>: Energy expenditure and potential physical strain</li>
               <li><strong>Time commitment</strong>: Direct hours invested in performing detailing operations</li>
             </ul>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/cost-comparison-chart.jpg"
-                alt="Visual comparison chart of professional vs. DIY costs with both monetary and time investments"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>The Equipment Reality Check</h2>
             <p>
@@ -130,16 +120,6 @@ export default function TrueCostOfDetailing() {
               results, even when using identical products.
             </p>
             
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/pro-vs-diy-results.jpg"
-                alt="Side-by-side comparison of professional vs. typical DIY results on the same vehicle section"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
-            
             <h2>The Time-Value Calculation</h2>
             <p>
               The most significant hidden cost in DIY detailing involves time allocation. Consider this representative 
@@ -190,16 +170,6 @@ export default function TrueCostOfDetailing() {
             <p>
               These durability differences directly impact the annual maintenance cost calculation when comparing approaches.
             </p>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/protection-duration.jpg"
-                alt="Timeline graphic showing duration of professional vs. DIY protection treatments"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>The Convenience Premium Analysis</h2>
             <p>
@@ -265,16 +235,6 @@ export default function TrueCostOfDetailing() {
               <li>Limited storage capacity</li>
               <li>Moderate or lower interest in hands-on detailing processes</li>
             </ul>
-            
-            <div className={styles.blogPostImageContainer} style={{ height: '300px', marginTop: '2rem', marginBottom: '2rem' }}>
-              <Image
-                src="/images/blog/decision-flowchart.jpg"
-                alt="Decision flowchart to help readers determine if professional detailing represents value for their situation"
-                width={900}
-                height={300}
-                className={styles.blogPostImage}
-              />
-            </div>
             
             <h2>Conclusion: Informed Value Assessment</h2>
             <p>
