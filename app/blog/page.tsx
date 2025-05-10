@@ -32,7 +32,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 'seasonal-car-care',
     title: 'Seasonal Car Care: Practical Protection Strategies Year-Round',
-    excerpt: 'Learn effective seasonal car care strategies to protect your vehicle throughout the year in Tennessee's variable climate, from dealing with pollen in spring to road salt in winter.',
+    excerpt: "Learn effective seasonal car care strategies to protect your vehicle throughout the year in Tennessee's variable climate, from dealing with pollen in spring to road salt in winter.",
     date: 'April 14, 2025',
     image: '/images/blog/econ-blog.jpg',
     author: 'Alex Joines'
