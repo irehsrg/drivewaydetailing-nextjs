@@ -66,8 +66,8 @@
 
 .pricingCard table {
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  display: block; /* On smallest screens */
 }
 
 .pricingCard th {
@@ -323,5 +323,26 @@
   .expeditedTitle,
   .referralTitle {
     font-size: 1.4rem;
+  }
+
+  .pricingTable {
+    font-size: 0.9rem;
+  }
+
+  .pricingCard th, 
+  .pricingCard td {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .tierCard {
+    padding: 1rem;
+  }
+  
+  .tierCard h5 {
+    font-size: 1.1rem;
+  }
+  
+  .tierBenefit p {
+    font-size: 0.9rem;
   }
 }

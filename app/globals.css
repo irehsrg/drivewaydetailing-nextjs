@@ -1,7 +1,10 @@
 /* Reset and base styles */
 body, html {
+  overflow-x: hidden;
+  width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
   font-family: 'Times New Roman', sans-serif;
   height: 100%;
   -webkit-font-smoothing: antialiased;

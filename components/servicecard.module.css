@@ -87,6 +87,15 @@
     padding: 1rem;
   }
 
+  .serviceImage {
+    display: none; /* Hide images on very small screens */
+  }
+
+  .serviceContent {
+    width: 100%;
+    padding-right: 0;
+  }
+  
   .title {
     font-size: 2rem;
   }

@@ -155,5 +155,10 @@
     .contactPage textarea,
     .submitButton {
       font-size: 0.9rem;
+      padding: 0.75rem 2rem;
     }
+
+    .formGroup {
+    width: 100%; /* Instead of 80% */
+  }
   }
