@@ -66,8 +66,6 @@
 
 .pricingCard table {
   width: 100%;
-  overflow-x: auto;
-  display: block; /* On smallest screens */
 }
 
 .pricingCard th {
@@ -86,6 +84,55 @@
   font-size: 1.6rem !important;
   font-weight: bold;
   color: #ffffff !important;
+}
+
+.sizeGuide {
+  margin-bottom: 2.5rem;
+  background-color: rgba(0, 148, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 148, 255, 0.3);
+}
+
+.sizeGuideTitle {
+  color: #0094ff;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sizeGuideContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sizeCategory {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sizeCategory h5 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.sizeCategory p {
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .sizeGuideContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .sizeGuideTitle {
+    font-size: 1.4rem;
+  }
 }
 
 .fineprint {

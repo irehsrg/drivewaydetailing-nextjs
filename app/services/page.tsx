@@ -25,6 +25,24 @@ const PricingCard: React.FC<PricingCardProps> = ({ prices }) => {
 
   return (
     <div className={styles.pricingCard}>
+      <div className={styles.sizeGuide}>
+        <h4 className={styles.sizeGuideTitle}>Vehicle Size Guide</h4>
+        <div className={styles.sizeGuideContent}>
+          <div className={styles.sizeCategory}>
+            <h5>Small</h5>
+            <p>One row of seating, such as sports cars (Porsche Boxster, Mazda Miata, etc.)</p>
+          </div>
+          <div className={styles.sizeCategory}>
+            <h5>Mid-sized</h5>
+            <p>Compact cars through two-row SUVs (Ford Focus, Honda Civic, Buick Encore, etc.)</p>
+          </div>
+          <div className={styles.sizeCategory}>
+            <h5>Large</h5>
+            <p>Most pickup trucks and three-row/large SUVs (F-150, Tahoe, Suburban, etc.)</p>
+          </div>
+        </div>
+      </div>
+      
       <table className={styles.pricingTable}>
         <thead>
           <tr>
