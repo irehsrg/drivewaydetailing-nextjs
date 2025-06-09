@@ -32,7 +32,18 @@ const galleryItems: GalleryItem[] = [
   { src: "/images/white-mustang5.JPG", alt: "White Mustang detailing" },
   { src: "/images/white-mustang6.JPG", alt: "White Mustang detailing" },
   { src: "/images/white-mustang7.JPG", alt: "White Mustang detailing" },
-  { src: "/images/white-mustang8.JPG", alt: "White Mustang detailing" }
+  { src: "/images/white-mustang8.JPG", alt: "White Mustang detailing" },
+  { src: "/images/white-mustang8.JPG", alt: "White Mustang detailing" },
+  { src: "/images/bm1.JPG", alt: "Black Mustang paint correction and ceramic coating" },
+  { src: "/images/bm2.JPG", alt: "Black Mustang paint correction and ceramic coating" },
+  { src: "/images/bm3.JPG", alt: "Black Mustang paint correction and ceramic coating" },
+  { src: "/images/bf1.jpeg", alt: "Before/After truck detailing" },
+  { src: "/images/bf2.jpeg", alt: "Before/After truck detailing" },
+  { src: "/images/bf3.jpeg", alt: "Before/After truck detailing" },
+  { src: "/images/t1.JPG", alt: "Truck detailing" },
+  { src: "/images/t2.JPG", alt: "Truck detailing" },
+  { src: "/images/t3.JPG", alt: "Truck detailing" },
+  { src: "/images/t4.JPG", alt: "Truck detailing" }
 ];
 
 const breakpointColumnsObj = {
